@@ -24,9 +24,13 @@ ldap_base=config.get('global','authentication.ldap.baseDn')
 ldap_group_name_attr=config.get('global','authentication.ldap.groupNamingAttr')
 ldap_group_objectClass=config.get('global','authentication.ldap.groupObjectClass')
 ldap_bind_dn=config.get('global','authentication.ldap.managerDn')
-ldap_primary_url='ldap://'+config.get('global','authentication.ldap.primaryUrl')
+ldap_ssl=config.get('global','authentication.ldap.useSSL')
 ldap_passwd_file=open(config.get('global','authentication.ldap.managerPassword'),'r').read()
 
+if ldap_ssl=='false':
+    ldap_primary_url='ldap://'+config.get('global','authentication.ldap.primaryUrl')
+else:
+    ldap_primary_url='ldaps://'+config.get('global','authentication.ldap.primaryUrl')
 
 
 if ldap_filter is not None:
