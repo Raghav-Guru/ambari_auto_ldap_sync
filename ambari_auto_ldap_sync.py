@@ -65,7 +65,7 @@ def sync_groups_from_file():
     execute_sync_groups=subprocess.Popen(sync_groups,shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out,err=execute_sync_groups.communicate()
 
-    print "Groups synced :{0}\n".format(group_list)
+    print "Groups being synced :{0}\n".format(group_list)
 
     print out
 
