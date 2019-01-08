@@ -10,11 +10,11 @@ On ambari server (copy the python script to the file on ambari host)
 
 **Step 2:** 
 
-    #python <path>/ambari_auto_ldap_sync/ambari_auto_ldap_sync.py -u <ambariAdmin> -p <ambariAdminPassword> -f '(<groupFilter>)'
+    #python <path>/ambari_auto_ldap_sync/ambari_auto_ldap_sync.py -u <ambariAdmin> -p <ambariAdminPassword> -f '(<groupFilter>)' -g
 
 eg: 
 
-     #python ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*))'
+     #python ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*))' -g
         Created group file /tmp/groups.20190108-022629.csv
         Groups synced :hr
         
@@ -62,4 +62,4 @@ eg:
 **Note:** Schedule in crontab if required below example to sync all the users of the groups mentioned with the filter for every 12hours. 
 
     #crontab -e
-    0 */12 * * * /var/tmp/ambari_auto_ldap_sync/ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*)(cn=hadoop-*))' > /tmp/ambari_ldap_auto_sync.log  2>&1
+    0 */12 * * * /var/tmp/ambari_auto_ldap_sync/ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*)(cn=hadoop-*))' -g > /tmp/ambari_ldap_auto_sync.log  2>&1
