@@ -14,7 +14,7 @@ On ambari server (copy the python script to the file on ambari host)
 
 eg: 
 
-     #python ambari_auto_ldap_sync.py -u admin -p rguruvannagari -f '(|(cn=hr*))'
+     #python ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*))'
         Created group file /tmp/groups.20190108-022629.csv
         Groups synced :hr
         
