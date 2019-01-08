@@ -93,7 +93,7 @@ eg:
     
     Deleting the users file : /tmp/users.20190108-041504.csv
 
-**Note:** Schedule in crontab if required below example to sync all the users of the groups mentioned with the filter for every 12hours. 
+**Note:** Schedule in crontab if required. Following is an example to sync all the users of the groups mentioned with the filter for every 12hours. 
 
     #crontab -e
     0 */12 * * * /var/tmp/ambari_auto_ldap_sync/ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*)(cn=hadoop-*))' -g > /tmp/ambari_ldap_auto_sync.log  2>&1
