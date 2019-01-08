@@ -65,7 +65,7 @@ To sync only users based on search filter use option -l :
     #python ambari_auto_ldap_sync.py   -u <ambariAdmin> -p <ambariAdminPassword> -f '(<userFilter>)' -l
 eg:
 
-    #python ambari_auto_ldap_sync.py  -u admin -p admin -f '(|(cn=hr*)(cn=hadoop-*))' -l
+    #python ambari_auto_ldap_sync.py  -u admin -p admin -f '(|(sAMAccountName=hr*)(sAMAccountName=hadoop-*))' -l
     Created users file /tmp/users.20190108-041504.csv
     Users synced : hr.test,hr1,hr2,hr3
     
