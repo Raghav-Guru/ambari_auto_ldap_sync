@@ -57,9 +57,7 @@ eg:
     
         Ambari Server 'sync-ldap' completed successfully.
         
-        Deleting the groups file : /tmp/groups
-
-.20190108-022629.csv
+        Deleting the groups file : /tmp/groups.20190108-022629.csv
 
 **Note:** Schedule in crontab if required below example to sync all the users of the groups mentioned with the filter for every 12hours. 
 
