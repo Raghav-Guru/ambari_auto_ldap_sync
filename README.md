@@ -14,53 +14,52 @@ On ambari server (copy the python script to the file on ambari host)
 
 eg: 
 
-    #python ambari_auto_ldap_sync.py -u admin -p admin -f '(|(cn=hr*)(cn=hadoop-*))'
-    Created group file /tmp/groups.20190108-022852.csv
-    Groups being synced :hr,hadoop-admins,hadoop-users
+     #python ambari_auto_ldap_sync.py -u admin -p rguruvannagari -f '(|(cn=hr*))'
+        Created group file /tmp/groups.20190108-022629.csv
+        Groups synced :hr
+        
     
-    Using python  /usr/bin/python
-    Syncing with LDAP...
-    Syncing specified users and groups...
+        Completed LDAP Sync.
+        Summary:
+          memberships:
+            removed = 0
+            created = 0
+          users:
+            skipped = 0
+            removed = 0
+            updated = 0
+            created = 0
+          groups:
+            updated = 0
+            removed = 0
+            created = 0
+        
+        Ambari Server 'sync-ldap' completed successfully.
+        
+        Using python  /usr/bin/python
+        Syncing with LDAP...
+        Syncing existing...
+        
+        Completed LDAP Sync.
+        Summary:
+          memberships:
+            removed = 0
+            created = 0
+          users:
+            skipped = 0
+            removed = 0
+            updated = 0
+            created = 0
+          groups:
+            updated = 0
+            removed = 0
+            created = 0
     
-    Completed LDAP Sync.
-    Summary:
-      memberships:
-        removed = 0
-        created = 0
-      users:
-        skipped = 0
-        removed = 0
-        updated = 0
-        created = 0
-      groups:
-        updated = 0
-        removed = 0
-        created = 0
-    
-    Ambari Server 'sync-ldap' completed successfully.
-    
-    Using python  /usr/bin/python
-    Syncing with LDAP...
-    Syncing existing...
-    
-    Completed LDAP Sync.
-    Summary:
-      memberships:
-        removed = 0
-        created = 0
-      users:
-        skipped = 0
-        removed = 0
-        updated = 0
-        created = 0
-      groups:
-        updated = 0
-        removed = 0
-        created = 0
+        Ambari Server 'sync-ldap' completed successfully.
+        
+        Deleting the groups file : /tmp/groups
 
-    Ambari Server 'sync-ldap' completed successfully.
-    
-    Deleting the groups file : /tmp/groups.20190108-022629.csv
+.20190108-022629.csv
 
 **Note:** Schedule in crontab if required below example to sync all the users of the groups mentioned with the filter for every 12hours. 
 
