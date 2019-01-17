@@ -1,3 +1,5 @@
+Works in ambari versions <=2.6.2
+
 # ambari_auto_ldap_sync
 This script can be used to automate the ldap usersync sync based on the group filter option
 
